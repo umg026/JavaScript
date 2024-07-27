@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <h1>Convert fahrenheit to celsius</h1>
+        <input type="text" name="name" id="value" placeholder="enter fren heat value">
+        <button onclick="displayValue()">Convert</button>
+        <p id="demo"></p>
+    </div>
+
+
+    <script>
+
+        function toCelsius(f) {
+            return (5 / 9) * (f - 32);
+        }
+
+        function displayValue() {
+            const value = document.getElementById("value").value
+            const celValue = toCelsius(value)
+            document.getElementById("demo").innerHTML = "celcisus :" + celValue.toFixed(2)
+        }
+
+    </script>
+
+</body>
+
+</html>
